@@ -1,0 +1,12 @@
+<h1>Mostrando los Post</h1>
+<p>  cantidad de post  <%= @posts.count %>          </p>
+
+<% @posts.each do |post| %>
+<h2><%= post.title %></h2>
+<p><%= post.content  %></p>
+<% end %>
+
+<div>
+    <%= link_to "agregar otro post", posts_new_path, class:"btn btn-dark"  %>
+
+</div>
